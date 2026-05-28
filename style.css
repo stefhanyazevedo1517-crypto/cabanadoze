@@ -1,0 +1,200 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fcf8f2;
+    color: #4a3b32;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #5c3a21;
+    color: #fbf5ed;
+    text-align: center;
+    padding: 40px 20px 20px 20px;
+    border-bottom: 5px solid #d4a373;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-style: italic;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+/* Menu de Navegação */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav a {
+    color: #fbf5ed;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background 0.3s;
+    font-weight: 600;
+}
+
+nav a:hover, nav a.active {
+    background-color: #d4a373;
+    color: #5c3a21;
+}
+
+/* Títulos das Páginas */
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #5c3a21;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #d4a373;
+    margin: 8px auto 0 auto;
+}
+
+/* Estilo do Cardápio (index) */
+.categoria {
+    margin-bottom: 40px;
+}
+
+.categoria h3 {
+    background-color: #e7d8c9;
+    padding: 10px 15px;
+    border-left: 5px solid #5c3a21;
+    margin-bottom: 15px;
+    color: #5c3a21;
+}
+
+.cardapio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #eadecf;
+}
+
+.item h4 {
+    color: #5c3a21;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.item p {
+    font-size: 0.95rem;
+    color: #6b5b52;
+    margin-bottom: 15px;
+}
+
+.preco {
+    font-weight: bold;
+    color: #b5651d;
+    font-size: 1.1rem;
+    align-self: flex-end;
+}
+
+/* Estilo da Página Sobre */
+.conteudo-texto p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+blockquote {
+    font-style: italic;
+    background-color: #e7d8c9;
+    padding: 20px;
+    border-left: 4px solid #d4a373;
+    margin: 30px 0;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Estilo da Página Como Chegar */
+.chegar-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.info-contato {
+    flex: 1;
+    min-width: 250px;
+}
+
+.info-contato h3 {
+    color: #5c3a21;
+    margin: 20px 0 5px 0;
+}
+
+.info-contato h3:first-child {
+    margin-top: 0;
+}
+
+.mapa-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+.mapa-placeholder {
+    background-color: #eadecf;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px dashed #a69080;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #5c3a21;
+    color: #eadecf;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+/* Responsividade Básica */
+@media (max-width: 600px) {
+    header h1 { font-size: 2rem; }
+    nav { flex-direction: column; align-items: center; gap: 5px; }
+    nav a { width: 100%; text-align: center; }
+}

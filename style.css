@@ -208,3 +208,23 @@ footer {
     text-decoration: underline;
     color: #25D366; /* Cor verde oficial do WhatsApp ao passar o mouse */
 }
+.btn-whatsapp {
+    display: inline-block;
+    background-color: #25D366; /* Verde oficial do WhatsApp */
+    color: #ffffff !important;   /* Texto branco */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 12px 24px;
+    border-radius: 50px;       /* Deixa o botão arredondado e moderno */
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3); /* Sombra suave */
+    transition: all 0.3s ease; /* Transição suave ao passar o mouse */
+    text-align: center;
+}
+
+.btn-whatsapp:hover {
+    background-color: #20ba5a; /* Tom de verde ligeiramente mais escuro no hover */
+    transform: translateY(-2px); /* Efeito sutil de flutuação */
+    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
+}

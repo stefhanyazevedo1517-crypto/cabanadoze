@@ -1,9 +1,12 @@
-/* Configurações Gerais */
+/* ==========================
+   Configurações Gerais
+========================== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -18,12 +21,15 @@ body {
     padding: 0 20px;
 }
 
-/* Cabeçalho */
+/* ==========================
+   Cabeçalho
+========================== */
+
 header {
     background-color: #5c3a21;
     color: #fbf5ed;
     text-align: center;
-    padding: 40px 20px 20px 20px;
+    padding: 40px 20px 20px;
     border-bottom: 5px solid #d4a373;
 }
 
@@ -39,11 +45,15 @@ header p {
     margin-bottom: 20px;
 }
 
-/* Menu de Navegação */
+/* ==========================
+   Menu de Navegação
+========================== */
+
 nav {
     display: flex;
     justify-content: center;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -51,16 +61,20 @@ nav a {
     text-decoration: none;
     padding: 8px 16px;
     border-radius: 4px;
-    transition: background 0.3s;
+    transition: 0.3s ease;
     font-weight: 600;
 }
 
-nav a:hover, nav a.active {
+nav a:hover,
+nav a.active {
     background-color: #d4a373;
     color: #5c3a21;
 }
 
-/* Títulos das Páginas */
+/* ==========================
+   Títulos
+========================== */
+
 h2 {
     text-align: center;
     margin-bottom: 30px;
@@ -69,15 +83,18 @@ h2 {
 }
 
 h2::after {
-    content: '';
+    content: "";
     display: block;
     width: 60px;
     height: 3px;
     background-color: #d4a373;
-    margin: 8px auto 0 auto;
+    margin: 8px auto 0;
 }
 
-/* Estilo do Cardápio (index) */
+/* ==========================
+   Cardápio
+========================== */
+
 .categoria {
     margin-bottom: 40px;
 }
@@ -97,14 +114,22 @@ h2::after {
 }
 
 .item {
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border: 1px solid #eadecf;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid #eadecf;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
 .item h4 {
@@ -126,7 +151,10 @@ h2::after {
     align-self: flex-end;
 }
 
-/* Estilo da Página Sobre */
+/* ==========================
+   Página Sobre
+========================== */
+
 .conteudo-texto p {
     margin-bottom: 20px;
     font-size: 1.1rem;
@@ -143,7 +171,10 @@ blockquote {
     font-size: 1.2rem;
 }
 
-/* Estilo da Página Como Chegar */
+/* ==========================
+   Página Como Chegar
+========================== */
+
 .chegar-flex {
     display: flex;
     flex-wrap: wrap;
@@ -157,11 +188,23 @@ blockquote {
 
 .info-contato h3 {
     color: #5c3a21;
-    margin: 20px 0 5px 0;
+    margin: 20px 0 5px;
 }
 
 .info-contato h3:first-child {
     margin-top: 0;
+}
+
+.info-contato a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.info-contato a:hover {
+    color: #25d366;
+    text-decoration: underline;
 }
 
 .mapa-container {
@@ -172,17 +215,49 @@ blockquote {
 .mapa-placeholder {
     background-color: #eadecf;
     height: 300px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     text-align: center;
     border: 2px dashed #a69080;
     border-radius: 6px;
     padding: 20px;
 }
 
-/* Rodapé */
+/* ==========================
+   Botão WhatsApp
+========================== */
+
+.btn-whatsapp {
+    display: inline-block;
+    background-color: #25d366;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 12px 24px;
+    border-radius: 50px;
+    margin-top: 10px;
+    text-align: center;
+
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    background-color: #20ba5a;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
+}
+
+/* ==========================
+   Rodapé
+========================== */
+
 footer {
     background-color: #5c3a21;
     color: #eadecf;
@@ -192,39 +267,121 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Responsividade Básica */
+/* ==========================
+   Responsividade
+========================== */
+
 @media (max-width: 600px) {
-    header h1 { font-size: 2rem; }
-    nav { flex-direction: column; align-items: center; gap: 5px; }
-    nav a { width: 100%; text-align: center; }
-}
-.info-contato a {
-    color: #inherit; /* Ou a cor de sua preferência para combinar com o layout */
-    text-decoration: none;
-    font-weight: bold;
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .chegar-flex {
+        flex-direction: column;
+    }
+
+    .cardapio-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
-.info-contato a:hover {
-    text-decoration: underline;
-    color: #25D366; /* Cor verde oficial do WhatsApp ao passar o mouse */
+/* Imagens do cardápio */
+.item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /* Mantém a proporção e corta o excesso */
+    border-radius: 8px;
+    display: block;
+    margin: 10px 0 15px;
 }
-.btn-whatsapp {
-    display: inline-block;
-    background-color: #25D366; /* Verde oficial do WhatsApp */
-    color: #ffffff !important;   /* Texto branco */
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-    padding: 12px 24px;
-    border-radius: 50px;       /* Deixa o botão arredondado e moderno */
-    margin-top: 10px;
-    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3); /* Sombra suave */
-    transition: all 0.3s ease; /* Transição suave ao passar o mouse */
+
+/* Card do produto */
+.item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid #e5d8c8;
+    box-shadow: 0 3px 8px rgba(0,0,0,.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.item h4 {
+    min-height: 45px;
+    text-align: center;
+    color: #5c3a21;
+}
+
+.item p {
+    flex: 1;
     text-align: center;
 }
 
-.btn-whatsapp:hover {
-    background-color: #20ba5a; /* Tom de verde ligeiramente mais escuro no hover */
-    transform: translateY(-2px); /* Efeito sutil de flutuação */
-    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
+.preco {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #b5651d;
+    text-align: center;
+}
+/* ==========================
+   Google Maps Responsivo
+========================== */
+
+.mapa-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+.mapa-container iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+
+    .chegar-flex {
+        flex-direction: column;
+    }
+
+    .mapa-container {
+        width: 100%;
+    }
+
+    .mapa-container iframe {
+        height: 350px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .mapa-container {
+        min-width: 100%;
+    }
+
+    .mapa-container iframe {
+        width: 100%;
+        height: 280px;
+        border-radius: 8px;
+    }
 }
